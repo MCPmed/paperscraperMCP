@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "paperscraper": {
+      "command": "python",
+      "args": ["-m", "paperscraper.mcp_server"],
+      "env": {
+        "PYTHONPATH": "."
+      }
+    }
+  }
+}

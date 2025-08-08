@@ -19,6 +19,7 @@ and plotting routines for meta-analysis.
 1. [Getting Started](#getting-started)
    - [Download X-rxiv Dumps](#download-x-rxiv-dumps)
    - [Arxiv Local Dump](#arxiv-local-dump)
+   - [MCP Server](#mcp-server)
 2. [Examples](#examples)
    - [Publication Keyword Search](#publication-keyword-search)
    - [Full-Text Retrieval (PDFs & XMLs)](#full-text-retrieval-pdfs--xmls)
@@ -72,6 +73,47 @@ backend directly in the `get_and_dump_arxiv_papers` function:
 from paperscraper.arxiv import get_and_dump_arxiv_papers
 get_and_dump_arxiv_papers(..., backend='local')
 ```
+
+#### MCP Server
+
+**Note: This is an early version of the MCP integration.**
+
+Paperscraper includes support for the Model Context Protocol (MCP), allowing Large Language Models to directly search for academic papers. The MCP server provides access to all paperscraper functionality through a standardized interface.
+
+To install and configure the MCP server:
+
+1. Install paperscraper with MCP support:
+```bash
+pip install paperscraper mcp
+```
+
+2. Configure the MCP server in your client application (e.g., Claude Desktop) by adding the following to your MCP configuration:
+```json
+{
+  "mcpServers": {
+    "paperscraper-server": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["/path/to/paperscraper/start_mcp.py"],
+      "env": {}
+    }
+  }
+}
+```
+
+Replace `/path/to/paperscraper/start_mcp.py` with the actual path to the start_mcp.py file in your paperscraper installation.
+
+Available MCP functions:
+- `search_pubmed`: Search for papers in PubMed database using keyword queries
+- `search_arxiv`: Search for papers in arXiv database using keyword queries  
+- `search_scholar`: Search for papers in Google Scholar using a topic query
+- `search_preprint_servers`: Search bioRxiv, medRxiv, and chemRxiv preprint servers
+- `get_citations`: Get citation count for a paper by title or DOI
+- `search_journal_impact`: Search for journal impact factors
+- `download_paper_pdf`: Download PDF of a paper using its DOI
+- `update_preprint_dumps`: Update local dumps of preprint servers
+
+Each function accepts structured queries with AND/OR boolean logic for comprehensive searches across multiple databases.
 
 ## Examples
 

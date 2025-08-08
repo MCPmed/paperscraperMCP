@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "paperscraper-server": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["/Users/matthiasflo/Documents/paperscraper/start_mcp.py"],
+      "env": {}
+    }
+  }
+}
