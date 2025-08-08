@@ -319,7 +319,7 @@ async def search_pubmed(arguments: Dict[str, Any]) -> List[TextContent]:
         get_and_dump_pubmed_papers(
             query, 
             output_filepath=temp_file,
-            retmax=max_results
+            max_results=max_results
         )
         
         results = load_jsonl(temp_file)
