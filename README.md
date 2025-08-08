@@ -1,14 +1,6 @@
-[![build](https://github.com/jannisborn/paperscraper/actions/workflows/test_tip.yml/badge.svg?branch=main)](https://github.com/jannisborn/paperscraper/actions/workflows/test_tip.yml?query=branch%3Amain)
-[![build](https://github.com/jannisborn/paperscraper/actions/workflows/test_pypi.yml/badge.svg?branch=main)](https://github.com/jannisborn/paperscraper/actions/workflows/test_pypi.yml?query=branch%3Amain)
-[![License:
-MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PyPI version](https://badge.fury.io/py/paperscraper.svg)](https://badge.fury.io/py/paperscraper)
-[![Downloads](https://static.pepy.tech/badge/paperscraper)](https://pepy.tech/project/paperscraper)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![codecov](https://codecov.io/github/jannisborn/paperscraper/branch/main/graph/badge.svg?token=Clwi0pu61a)](https://codecov.io/github/jannisborn/paperscraper)
-# paperscraper
+# paperscraperMCP
 
-`paperscraper` is a `python` package for scraping publication metadata or full text files (PDF or XML) from
+`paperscraperMCP` is a `python` package for scraping publication metadata or full text files (PDF or XML) from
 **PubMed** or preprint servers such as **arXiv**, **medRxiv**, **bioRxiv** and **chemRxiv**.
 It provides a streamlined interface to scrape metadata, allows to retrieve citation counts
 from Google Scholar, impact factors from journals and comes with simple postprocessing functions
